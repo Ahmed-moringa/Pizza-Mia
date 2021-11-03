@@ -3,6 +3,11 @@ html{
   }
   
   body {
+    background-attachment: fixed;
+    background-image: url("../images/shourav-sheikh-a66sGfOnnqQ-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     overflow-x: hidden;
     min-height: 100%;
     scroll-behavior: smooth;
@@ -31,11 +36,6 @@ html{
   }
   
   .order{
-    background-attachment: fixed;
-    background-image: url("../images/shourav-sheikh-a66sGfOnnqQ-unsplash.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     color: white;
     padding-top: 4%;
     padding-bottom: 4%;
@@ -92,7 +92,7 @@ html{
     font-size: 22px;
     padding-right: 8%;
     padding-left: 5%;
-    color: #ffa500;
+    color: #000000;
   }
   
   .order-overlay{
