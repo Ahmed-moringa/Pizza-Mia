@@ -1,34 +1,42 @@
-var price, crustPrice, toppingPrice;
-let total = 0;
-
-function getPizza(size, crust, topping, total) {
-    this.size = size;
-    this.crust = crust;
-    this.topping = topping;
-    this.total = total;
+var sizes = {small: 100, medium: 200, large: 300}
+var crusts = {stuffed: 10, glutenFree: 20, crispy: 50}
+var toppings = {
+    'Hawaii':{
+        small: 10,
+        medium: 15,
+        large: 20
+    },
+    'Pepperoni':{
+        small: 15,
+        medium: 20,
+        large: 25
+    },
+    'Barbecue':{
+        small: 20,
+        medium: 30,
+        large: 50
+    },
 }
 
-$(document).ready(function () {
-    $("button.addOrder").click(function (event) {
-        let pizzaSize = $("#size option:selected").val();
-        let pizzaCrust = $("#crust option:selected").val();
-        let pizzaTopping = $("topping option:selected").val();
+function Pizza(size, crust, toppings) {
+    this.size = size;
+    this.crust = crust;
+    this.toppings = toppings
+    this.sizePrice = sizes[this.size]
+    this.crustPrice = crusts[this.crust]
+    this.topPrice = 0
+
+}
+Pizza.prototype.getTopPrice = function() {
+    this.toppings.forEach(Pizza,this.size) {
+        
     });
-    switch (pizzaSize) {
-        case "0":
-            price = 0;
-            break;
-        case "small":
-            price = 600;
-            console.log(price);
-            break;
-        case "medium":
-            price = 800;
-            console.log(price);
-            break;
-        case "large":
-            price = 1000;
-        default:
-            console.log("error");
-    }
-})
+        
+    );
+}
+var jamalPizza = new Pizza('medium', 'glutenFree', ['Hawaii', 'Pepperoni'])
+//console.log(jamalPizza.)
+
+
+// console.log(toppings['Pepperoni'][size])
+
