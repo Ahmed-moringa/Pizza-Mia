@@ -1,23 +1,18 @@
 # Pizza-Mia
-## Author
-
-[Ahmed Mohamed]()
-
-## Description
-
-This is a web application for Pizza Mia which is a pizza selling venture, that shows details about the services and diffent pizza they sell, their menu and also allows customers to order online for their preferred pizza depending on size, crust they need and also allows them to input a location which they would love the piza to be delivered to. 
 
 ## Screenshot
 
+[![Screenshot-2021-11-03-at-05-37-47.png](https://i.postimg.cc/CxG18Mr5/Screenshot-2021-11-03-at-05-37-47.png)](https://postimg.cc/75Lw84kr)
 
-## Live Page 
+## Description
 
+This is a web application for Pizza Mia which allows customers to order online for their preferred pizza depending on size, crust they need and also allows them to input a location which they would love the pizza to be delivered to. 
 
 
 ## Installation / Setup instruction
 * Open Terminal {Ctrl+Alt+T}
 
-* git clone ``````
+* git clone ```https://github.com/Ahmed-moringa/Pizza-Mia.git```
 
 * cd Pizza-Mia
 
@@ -35,15 +30,14 @@ This is a web application for Pizza Mia which is a pizza selling venture, that s
 ## BDD
 | Behaviour      | Input        | Output       |
 | :------------- | :----------: | -----------: |
-
-
-## Known Bugs
-
-* 
-
-## Contact Information 
-
-If you have any question or contributions that would better this app, please email me at [ahmed.mohamed@studentgmail.com]
+| Select pizza size  | large, medium, small |  pizza size  |
+| Select Crust   | cripsyn, stuffed, glutten-free  |     |
+| select toppings  |  check all the topppings you want     |     |
+| Press Proceed button |     | Table with your selections with the total price for that selection.|
+| Press add pizza button | pizza flavor,size, crust and toppings   | new selection added to the table|
+| Press Checkout |     | Your bill is ...  |
+| Press home delivery | Your name, phone number and delivery location     |  |
+| press place order| | We have recieved your order and it will be delivered to you with your name, place of delivery and amount to be paid.|
 
 ## License
 * *MIT License:*
