@@ -134,3 +134,52 @@ function Getpizza(size,crust,topping, total ){
       
 
     });
+    // Checkout button
+    $("button#checkout").click(function(){ 
+      $("button#checkout").hide();
+      $("button.addPizza").hide();
+      $("button.deliver").slideDown(1000);
+      $("#addedprice").slideDown(1000);
+      $("#pizzatotal").append("Your bill is sh. "+checkoutTotal);
+    });
+
+    // home delivery button
+    $("button.deliver").click(function(){
+      $(".pizzatable").hide();
+      $(".choice h2").hide();
+      $(".delivery").slideDown(1000);
+      $("#addedprice").hide();
+      $("button.deliver").hide();
+      $("#pizzatotal").hide();
+      let deliveryAmount = checkoutTotal+150;
+      $("#totalbill").append("Your bill plus delivery fee is: "+deliveryAmount );
+    });
+
+    // when one clicks place order button
+    $("button#final-order").click(function(event){
+      event.preventDefault();
+
+      $("#pizzatotal").hide();
+      $(".delivery").hide();
+      $("button#final-order").hide();
+      let deliveryAmount = checkoutTotal+150;
+      console.log("Final Bill is: "+deliveryAmount );
+      let person = $("input#name").val();
+      let phone = $("input#phone").val();
+      let location = $("input#location").val();
+
+      if ($("input#name").val() && $("input#phone").val() && $("input#location").val()!=""){
+  
+        $("#finallmessage").append(person+", We have recieved your order and it will be delivered to you at "+location+ ". Prepare sh. "+deliveryAmount );
+        $("#totalbill").hide();
+        $("#finallmessage").slideDown(1200);
+      }
+      else {
+        alert("Please fill in the details for delivery!");
+        $(".delivery").show();
+        $("button#final-order").show();
+      }
+    });
+   event.preventDefault();
+  });
+});
